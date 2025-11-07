@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Origami Linux – Fold Your System</title>
+  <meta name="description" content="Origami Linux: Fedora Atomic + Cosmic Desktop with modern tooling, thoughtful defaults, and elegant design." />
+  <meta property="og:title" content="Origami Linux" />
+  <meta property="og:description" content="Next‑generation Fedora Atomic based distro with Cosmic desktop." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome (jsdelivr, no SRI to avoid blocking if version hash changes) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="logo-wrap">
+      <svg class="logo-svg" width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32,16.17l-1.65,22.11,17.44-4.29c-.64,0-1.25-.29-1.65-.79l-13.5-16.76c-.16-.18-.4-.28-.64-.27h0Z" fill="#00bff8"/>
+        <path d="M32,16.17c-.24,0-.48,.09-.64,.27l-13.5,16.76c-.4,.5-1.01,.79-1.65,.79l15.79,2.46V16.17Z" fill="#0acffb"/>
+        <path d="M32,33.99H5.57c-.44,0-.72,.49-.48,.87l7.5,12.14c.2,.3,.47,.53,.8,.67l14.6-6.49,4.01-7.18Z" fill="#62d9fa"/>
+        <path d="M32,33.99l3.52,7.21,15.1,6.47c.33-.14,.6-.37,.8-.67l7.5-12.14c.23-.38-.04-.87-.48-.87h-26.43Z" fill="#62d9fa"/>
+        <path d="M32,33.99l-18.62,13.68c.23,.12,.49,.18,.75,.19H49.86c.26-.01,.52-.08,.75-.19l-18.62-13.68Z" fill="#0acffb"/>
+        <path d="M4,34.56c0,.29,.08,.58,.23,.82l7.5,12.14c.52,.84,1.42,1.34,2.4,1.34H49.86c.99,0,1.88-.5,2.4-1.34l7.5-12.14c.22-.36,.29-.78,.19-1.18s-.35-.75-.7-.97c-.25-.15-.53-.23-.82-.23h-10.64c-.34,0-.66-.15-.88-.42l-13.5-16.76c-.31-.38-.74-.62-1.22-.67-.63-.06-1.23,.19-1.61,.67l-13.5,16.76c-.21,.27-.53,.42-.88,.42H5.57c-.86,0-1.57,.7-1.57,1.57Zm43.83,12.3H16.17l15.83-11.63,15.83,11.63Zm9.82-11.87l-7.06,11.42-15.55-11.42h22.61Zm-12.97-2h-11.69v-14.51l11.69,14.51Zm-13.69-14.51v14.51h-11.69l11.69-14.51Zm-2.05,16.51l-15.55,11.42-7.06-11.42H28.95Z"/>
+      </svg>
+      <h1 class="logo-text">Origami Linux</h1>
+    </div>
+    <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul id="nav-links">
+        <li><a href="#about"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> About</a></li>
+        <li><a href="#features"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Features</a></li>
+        <li><a href="#installation"><i class="fa-solid fa-download" aria-hidden="true"></i> Install</a></li>
+        <li><a href="#philosophy"><i class="fa-solid fa-feather" aria-hidden="true"></i> Philosophy</a></li>
+        <li><a href="#community"><i class="fa-solid fa-users" aria-hidden="true"></i> Community</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle" aria-label="Theme toggle">
+      <button id="themeBtn" title="Toggle light/dark">🌙</button>
+    </div>
+  </header>
+
+  <section class="hero" role="banner">
+    <div class="hero-content">
+      <h2>Transform Your Linux Experience</h2>
+      <p class="tagline">The art of paper folding meets atomic computing.</p>
+      <p class="tagline-features">Beautiful • Secure • Developer-Ready</p>
+      <p class="hero-description">Origami Linux combines Fedora Atomic's reliability with Cosmic Desktop's elegance, delivering a container-first development environment that adapts to your workflow.</p>
+      <div class="cta-group">
+        <a class="btn primary" href="https://pub-afd20e8301164bff9e6ceb0ebc38f6d6.r2.dev/origami.iso" target="_blank" rel="noopener"><i class="fa-solid fa-download" aria-hidden="true"></i> Download ISO</a>
+        <a class="btn" href="https://pub-afd20e8301164bff9e6ceb0ebc38f6d6.r2.dev/origami-nvidia.iso" target="_blank" rel="noopener"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Nvidia ISO</a>
+        <a class="btn outline" href="https://github.com/john-holt4/Origami" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="btn outline" href="https://discord.gg/CEvU5QqW" target="_blank" rel="noopener"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord</a>
+      </div>
+      <img src="screenshot.png" alt="Origami Linux Desktop Screenshot" class="hero-screenshot" />
+    </div>
+    <div class="scroll-indicator" aria-hidden="true"><i class="fa-solid fa-chevron-down" aria-hidden="true"></i> Scroll to explore</div>
+  </section>
+
+  <section id="about" class="panel">
+    <div class="inner">
+      <h3><i class="fa-solid fa-question-circle" aria-hidden="true"></i> Why Origami?</h3>
+      <p><i class="fa-solid fa-origami" aria-hidden="true"></i> Inspired by <strong>折り紙</strong> – the Japanese art of paper folding – Origami Linux symbolizes transformation, creativity, and simplicity. Just as a single sheet of paper can be folded into infinite forms, Origami lets you shape your system to fit your unique workflow.</p>
+      <div class="value-props">
+        <div class="value-prop">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          <h4>Atomic & Secure</h4>
+          <p>Immutable OS with signed container images and atomic updates</p>
+        </div>
+        <div class="value-prop">
+          <i class="fa-solid fa-cube" aria-hidden="true"></i>
+          <h4>Container-First</h4>
+          <p>Develop in isolated environments while keeping your host clean</p>
+        </div>
+        <div class="value-prop">
+          <i class="fa-solid fa-palette" aria-hidden="true"></i>
+          <h4>Beautiful by Default</h4>
+          <p>Cosmic Desktop with thoughtful theming and modern aesthetics</p>
+        </div>
+      </div>
+      <p class="note"><i class="fa-solid fa-flask" aria-hidden="true"></i> Experimental project: expect rapid iteration. Back up your data.</p>
+    </div>
+  </section>
+
+  <section id="features" class="panel alt">
+    <div class="inner">
+      <div class="section-header">
+        <h3>What Makes Origami Special</h3>
+        <p class="subtitle">Every fold serves a purpose. Every choice enhances the experience.</p>
+      </div>
+      
+      <div class="features-showcase">
+        <div class="feature-category">
+          <div class="category-header">
+            <i class="fa-solid fa-mountain" aria-hidden="true"></i>
+            <h4>Rock-Solid Foundation</h4>
+          </div>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <h5>Fedora Atomic Core</h5>
+              <p>Built on Universal Blue's proven foundation with atomic updates, automatic rollbacks, and immutable system guarantees.</p>
+              <div class="feature-tags">
+                <span class="tag">Immutable</span>
+                <span class="tag">Reliable</span>
+                <span class="tag">Sigstore</span>
+              </div>
+            </div>
+            <div class="feature-card">
+              <h5>Cosmic Desktop</h5>
+              <p>System76's next-generation desktop environment written in Rust, delivering performance and modern design philosophy.</p>
+              <div class="feature-tags">
+                <span class="tag">Rust-powered</span>
+                <span class="tag">Wayland-native</span>
+                <span class="tag">Future-ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <div class="category-header">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <h4>Developer Experience</h4>
+          </div>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <h5>Modern CLI Toolkit</h5>
+              <p>Replace legacy tools with rust-powered alternatives: <strong>eza</strong> for ls, <strong>bat</strong> for cat, <strong>ripgrep</strong> for grep, <strong>zoxide</strong> for cd.</p>
+              <div class="feature-tags">
+                <span class="tag">Fast</span>
+                <span class="tag">User-friendly</span>
+                <span class="tag">Rust</span>
+              </div>
+            </div>
+            <div class="feature-card">
+              <h5>Container Workflows</h5>
+              <p>Distrobox integration for isolated development environments. Keep your host clean while maintaining multiple project containers.</p>
+              <div class="feature-tags">
+                <span class="tag">Podman</span>
+                <span class="tag">Distrobox</span>
+                <span class="tag">Isolation</span>
+              </div>
+            </div>
+            <div class="feature-card">
+              <h5>Git & Editing</h5>
+              <p>Helix editor with LSP support out-of-the-box, plus lazygit for beautiful terminal-based Git workflows.</p>
+              <div class="feature-tags">
+                <span class="tag">Helix</span>
+                <span class="tag">LSP Ready</span>
+                <span class="tag">Git UI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <div class="category-header">
+            <i class="fa-solid fa-palette" aria-hidden="true"></i>
+            <h4>Aesthetic Excellence</h4>
+          </div>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <h5>Typography & Icons</h5>
+              <p>System-wide Inter and JetBrains Mono fonts with WhiteSur icon theme for consistent, modern visual language.</p>
+              <div class="feature-tags">
+                <span class="tag">Inter Font</span>
+                <span class="tag">JetBrains Mono</span>
+                <span class="tag">WhiteSur</span>
+              </div>
+            </div>
+            <div class="feature-card">
+              <h5>Terminal Beauty</h5>
+              <p>Fastfetch system info, Starship prompt, plus delightful terminal art tools like cbonsai and cmatrix for moments of zen.</p>
+              <div class="feature-tags">
+                <span class="tag">Fastfetch</span>
+                <span class="tag">Starship</span>
+                <span class="tag">Terminal Art</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-category">
+          <div class="category-header">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            <h4>Performance & Tools</h4>
+          </div>
+          <div class="feature-cards">
+            <div class="feature-card">
+              <h5>Network & Downloads</h5>
+              <p>Cloudflare Warp integration for secure browsing, plus aria2 and axel for accelerated downloads.</p>
+              <div class="feature-tags">
+                <span class="tag">Warp VPN</span>
+                <span class="tag">Fast Downloads</span>
+                <span class="tag">Privacy</span>
+              </div>
+            </div>
+            <div class="feature-card">
+              <h5>System Utilities</h5>
+              <p>Rust-powered sudo replacement (sudo-rs), system monitoring tools, and audio visualization with cava.</p>
+              <div class="feature-tags">
+                <span class="tag">sudo-rs</span>
+                <span class="tag">Monitoring</span>
+                <span class="tag">Audio Viz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="philosophy-preview">
+        <blockquote>
+          "Like origami paper, every fold has intention. Every crease serves the final form. Origami Linux embraces this philosophy—each package, each configuration chosen with purpose."
+        </blockquote>
+        <a href="#philosophy" class="btn">
+          <i class="fa-solid fa-feather" aria-hidden="true"></i>
+          Learn Our Philosophy
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="installation" class="panel">
+    <div class="inner">
+      <div class="section-header">
+        <h3>Getting Started</h3>
+        <a class="btn tiny outline" href="https://github.com/john-holt4/Origami-Linux/wiki/Getting-Started" target="_blank" rel="noopener">
+          <i class="fa-solid fa-book" aria-hidden="true"></i> Complete Setup Guide
+        </a>
+      </div>
+      <div class="install-options">
+        <div class="install-option">
+          <h4><i class="fa-solid fa-compact-disc" aria-hidden="true"></i> Fresh Installation</h4>
+          <p><i class="fa-solid fa-hard-drive" aria-hidden="true"></i> Download the ISO and install fresh on your machine.</p>
+          <div class="install-buttons">
+            <a class="btn primary" href="https://pub-afd20e8301164bff9e6ceb0ebc38f6d6.r2.dev/origami.iso" target="_blank" rel="noopener"><i class="fa-solid fa-download" aria-hidden="true"></i> Standard ISO</a>
+            <a class="btn" href="https://pub-afd20e8301164bff9e6ceb0ebc38f6d6.r2.dev/origami-nvidia.iso" target="_blank" rel="noopener"><i class="fa-solid fa-microchip" aria-hidden="true"></i> Nvidia ISO</a>
+          </div>
+        </div>
+        <div class="install-option">
+          <h4><i class="fa-solid fa-refresh" aria-hidden="true"></i> Rebase from Fedora Atomic</h4>
+          <p><i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> Switch your existing Fedora Atomic system to Origami.</p>
+          <details>
+            <summary><i class="fa-solid fa-code" aria-hidden="true"></i> Show Commands</summary>
+            <pre><code># Rebase to Origami (standard)
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/john-holt4/origami-linux:latest
+systemctl reboot
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/john-holt4/origami-linux:latest
+systemctl reboot
+
+# For Nvidia systems
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/john-holt4/origami-linux-nvidia:latest
+systemctl reboot
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/john-holt4/origami-linux-nvidia:latest
+systemctl reboot</code></pre>
+          </details>
+        </div>
+      </div>
+      
+      <div class="verification-info">
+        <h4><i class="fa-solid fa-shield-check" aria-hidden="true"></i> Security & Verification</h4>
+        <p><i class="fa-solid fa-signature" aria-hidden="true"></i> All images are signed with Sigstore for supply-chain security.</p>
+        <details>
+          <summary><i class="fa-solid fa-key" aria-hidden="true"></i> Verify Image Signature</summary>
+          <pre><code>curl -O https://raw.githubusercontent.com/john-holt4/Origami-Linux/main/cosign.pub
+cosign verify --key cosign.pub ghcr.io/john-holt4/origami-linux:latest</code></pre>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section id="philosophy" class="panel alt">
+    <div class="inner">
+      <h3><i class="fa-solid fa-feather" aria-hidden="true"></i> Philosophy</h3>
+      <div class="principles">
+        <article><h4><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i> Kaizen 改善</h4><p>Continuous improvement, iterative refinement.</p></article>
+        <article><h4><i class="fa-solid fa-heart" aria-hidden="true"></i> Wabi‑Sabi 侘寂</h4><p>Beauty in simplicity and imperfection.</p></article>
+        <article><h4><i class="fa-solid fa-minimize" aria-hidden="true"></i> Kanso 簡素</h4><p>Elegance through reduction of clutter.</p></article>
+        <article><h4><i class="fa-solid fa-leaf" aria-hidden="true"></i> Shizen 自然</h4><p>Naturalness without pretense – authenticity.</p></article>
+      </div>
+      <blockquote class="quote">“A single sheet becomes a masterpiece through deliberate folds. Your system should too.”</blockquote>
+    </div>
+  </section>
+
+  <section id="community" class="panel">
+    <div class="inner">
+      <h3><i class="fa-solid fa-users" aria-hidden="true"></i> Community & Contributing</h3>
+      <p><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Origami thrives on shared creativity. Report bugs, suggest features, improve docs, craft themes, or contribute code.</p>
+      <ul class="inline-links">
+        <li><a href="https://github.com/john-holt4/Origami/issues" target="_blank" rel="noopener"><i class="fa-solid fa-bug" aria-hidden="true"></i> Issue Tracker</a></li>
+        <li><a href="https://discord.gg/CEvU5QqW" target="_blank" rel="noopener"><i class="fa-brands fa-discord" aria-hidden="true"></i> Discord Server</a></li>
+        <li><a href="https://github.com/john-holt4/Origami" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> Source Code</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="inner footer-content">
+      <p class="small"><i class="fa-solid fa-copyright" aria-hidden="true"></i> <span id="year"></span> Origami Linux. <i class="fa-solid fa-hammer" aria-hidden="true"></i> Crafted with precision & purpose.</p>
+      <p class="small"><i class="fa-solid fa-heart" aria-hidden="true"></i> This project is sponsored by <i class="fa-solid fa-cloud" aria-hidden="true"></i> Cloudflare's Project Alexandria</p>
+      <button class="back-top" data-scroll="#top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
