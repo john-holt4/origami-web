@@ -8,7 +8,7 @@ pages:
     # Create the 'public' directory
     - mkdir -p public
     # Your files are in the 'html' folder, so copy its contents
-    - cp -r html/* public/
+    - cp -r * public/
   
   artifacts:
     paths:
