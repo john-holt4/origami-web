@@ -1,19 +1,13 @@
 pages:
   stage: deploy
-  # Use a minimal image, since we only need to copy files
   image: alpine:latest 
   
   script:
-    - echo "Copying website files to the 'public' directory..."
-    # Create the 'public' directory
-    - mkdir -p public
-    # Your files are in the 'html' folder, so copy its contents
-    - cp * public/
+    - echo "Origami Linux Website Updating....."
   
   artifacts:
     paths:
-      # This is the directory GitLab Pages will serve
-      - public
+      - /
       
   rules:
     # Only run this job on your default branch
