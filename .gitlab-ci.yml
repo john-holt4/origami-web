@@ -3,11 +3,17 @@ pages:
   image: alpine:latest 
   
   script:
-    - echo "Origami Linux Website Updating....."
+    - echo "Copying website files to public..."
+    # Create the 'public' directory
+    - mkdir -p public
+    # Explicitly copy only the website files into 'public'
+    # This avoids the 'cp: recursion detected' error.
+    - cp index.html styles.css script.js screenshot.png origami.ico public/
   
   artifacts:
+    # Tell GitLab to save and serve the 'public' folder
     paths:
-      - /
+      - public
       
   rules:
     # Only run this job on your default branch
