@@ -249,15 +249,15 @@
           <details>
             <summary><i class="fa-solid fa-code" aria-hidden="true"></i> Show Commands</summary>
             <pre><code># Rebase to Origami (standard)
-rpm-ostree rebase ostree-unverified-registry:registry.gitlab.com/origami-linux/images/origami-linux:latest
+rpm-ostree rebase ostree-unverified-registry:registry.gitlab.com/origami-linux/images/origami:latest
 systemctl reboot
-rpm-ostree rebase ostree-image-signed:docker://registry.gitlab.com/origami-linux/images/origami-linux:latest
+rpm-ostree rebase ostree-image-signed:docker://registry.gitlab.com/origami-linux/images/origami:latest
 systemctl reboot
 
 # For Nvidia systems
-rpm-ostree rebase ostree-unverified-registry:registry.gitlab.com/origami-linux/images/origami-linux-nvidia:latest
+rpm-ostree rebase ostree-unverified-registry:registry.gitlab.com/origami-linux/images/origami-nvidia:latest
 systemctl reboot
-rpm-ostree rebase ostree-image-signed:docker://registry.gitlab.com/origami-linux/images/origami-linux-nvidia:latest
+rpm-ostree rebase ostree-image-signed:docker://registry.gitlab.com/origami-linux/images/origami-nvidia:latest
 systemctl reboot</code></pre>
           </details>
         </div>
@@ -269,7 +269,7 @@ systemctl reboot</code></pre>
         <details>
           <summary><i class="fa-solid fa-key" aria-hidden="true"></i> Verify Image Signature</summary>
           <pre><code>curl -O https://gitlab.com/origami-linux/images/-/raw/main/cosign.pub
-cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami-linux:latest</code></pre>
+cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:latest</code></pre>
         </details>
       </div>
     </div>
