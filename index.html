@@ -181,11 +181,37 @@
                         Discord</a
                     >
                 </div>
-                <img
-                    src="screenshot.png"
-                    alt="Origami Linux Desktop Screenshot"
-                    class="hero-screenshot"
-                />
+                <picture>
+                    <!-- Mobile devices (up to 640px) -->
+                    <source
+                        media="(max-width: 640px)"
+                        srcset="
+                            /cdn-cgi/image/width=640,format=auto,quality=85,fit=scale-down,dpr=1/screenshot.png 1x,
+                            /cdn-cgi/image/width=640,format=auto,quality=85,fit=scale-down,dpr=2/screenshot.png 2x
+                        "
+                    />
+
+                    <!-- Tablet devices (641px to 960px) -->
+                    <source
+                        media="(max-width: 960px)"
+                        srcset="
+                            /cdn-cgi/image/width=960,format=auto,quality=85,fit=scale-down,dpr=1/screenshot.png 1x,
+                            /cdn-cgi/image/width=960,format=auto,quality=85,fit=scale-down,dpr=2/screenshot.png 2x
+                        "
+                    />
+
+                    <!-- Desktop devices (961px and above) - fallback -->
+                    <img
+                        src="/cdn-cgi/image/width=1920,format=auto,quality=85,fit=scale-down/screenshot.png"
+                        srcset="
+                            /cdn-cgi/image/width=1920,format=auto,quality=85,fit=scale-down,dpr=1/screenshot.png 1x,
+                            /cdn-cgi/image/width=1920,format=auto,quality=85,fit=scale-down,dpr=2/screenshot.png 2x
+                        "
+                        alt="Origami Linux Desktop Screenshot"
+                        class="hero-screenshot"
+                        loading="lazy"
+                    />
+                </picture>
             </div>
             <div class="scroll-indicator" aria-hidden="true">
                 <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
