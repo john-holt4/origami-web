@@ -203,7 +203,6 @@
                     Why Origami?
                 </h3>
                 <p>
-                    <i class="fa-solid fa-origami" aria-hidden="true"></i>
                     Inspired by <strong>折り紙</strong> – the Japanese art of
                     paper folding – Origami Linux symbolizes transformation,
                     creativity, and simplicity. Just as a single sheet of paper
@@ -270,7 +269,7 @@
                             <div class="feature-card">
                                 <h5>Fedora Atomic Core</h5>
                                 <p>
-                                    Built on Universal Blue's proven foundation
+                                    Built on Fedora Atomic's proven foundation
                                     with atomic updates, automatic rollbacks,
                                     and immutable system guarantees.
                                 </p>
@@ -331,19 +330,6 @@
                                     <span class="tag">Isolation</span>
                                 </div>
                             </div>
-                            <div class="feature-card">
-                                <h5>Git & Editing</h5>
-                                <p>
-                                    Helix editor with LSP support
-                                    out-of-the-box, plus lazygit for beautiful
-                                    terminal-based Git workflows.
-                                </p>
-                                <div class="feature-tags">
-                                    <span class="tag">Helix</span>
-                                    <span class="tag">LSP Ready</span>
-                                    <span class="tag">Git UI</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -359,14 +345,16 @@
                             <div class="feature-card">
                                 <h5>Typography & Icons</h5>
                                 <p>
+                                    Using a custom color theme on top of
                                     System-wide Inter and JetBrains Mono fonts
-                                    with WhiteSur icon theme for consistent,
-                                    modern visual language.
+                                    with WhiteSur icon theme & Bibata Cursors
+                                    for consistent, modern visual language.
                                 </p>
                                 <div class="feature-tags">
-                                    <span class="tag">Inter Font</span>
-                                    <span class="tag">JetBrains Mono</span>
-                                    <span class="tag">WhiteSur</span>
+                                    <span class="tag">Fonts</span>
+                                    <span class="tag">Icons</span>
+                                    <span class="tag">Cursors</span>
+                                    <span class="tag">Custom Color Theme</span>
                                 </div>
                             </div>
                             <div class="feature-card">
@@ -445,7 +433,7 @@
                     <h3>Getting Started</h3>
                     <a
                         class="btn tiny outline"
-                        href="https://gitlab.com/origami-linux/"
+                        href="https://gitlab.com/groups/origami-linux/-/wikis/Getting-Started"
                         target="_blank"
                         rel="noopener"
                     >
@@ -519,15 +507,15 @@
                                 Show Commands
                             </summary>
                             <pre><code># Rebase to Origami (standard)
-rpm-ostree rebase ostree-unverified-registry:registry.gitlab.com/origami-linux/images/origami:latest
+sudo bootc switch registry.gitlab.com/origami-linux/images/origami:latest
 systemctl reboot
-rpm-ostree rebase ostree-image-signed:docker://registry.gitlab.com/origami-linux/images/origami:latest
+sudo bootc switch --enforce-container-sigpolicy registry.gitlab.com/origami-linux/images/origami:latest
 systemctl reboot
 
 # For Nvidia systems
-rpm-ostree rebase ostree-unverified-registry:registry.gitlab.com/origami-linux/images/origami-nvidia:latest
+sudo bootc switch registry.gitlab.com/origami-linux/images/origami-nvidia:latest
 systemctl reboot
-rpm-ostree rebase ostree-image-signed:docker://registry.gitlab.com/origami-linux/images/origami-nvidia:latest
+sudo bootc switch --enforce-container-sigpolicy registry.gitlab.com/origami-linux/images/origami-nvidia:latest
 systemctl reboot</code></pre>
                         </details>
                     </div>
