@@ -309,6 +309,7 @@
                                     <strong>bat</strong> for cat,
                                     <strong>ripgrep</strong> for grep,
                                     <strong>zoxide</strong> for cd.
+                                    <strong>zellij</strong> for tmux.
                                 </p>
                                 <div class="feature-tags">
                                     <span class="tag">Fast</span>
@@ -499,14 +500,20 @@
                             </summary>
                             <pre><code># Rebase to Origami (standard)
 sudo bootc switch registry.gitlab.com/origami-linux/images/origami:latest
+
 systemctl reboot
+
 sudo bootc switch --enforce-container-sigpolicy registry.gitlab.com/origami-linux/images/origami:latest
+
 systemctl reboot
 
 # For Nvidia systems
 sudo bootc switch registry.gitlab.com/origami-linux/images/origami-nvidia:latest
+
 systemctl reboot
+
 sudo bootc switch --enforce-container-sigpolicy registry.gitlab.com/origami-linux/images/origami-nvidia:latest
+
 systemctl reboot</code></pre>
                         </details>
                     </div>
