@@ -195,6 +195,15 @@ p {
     border-radius: var(--radius-pill);
     transition: 0.25s;
 }
+
+.main-nav svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
 .main-nav a:hover,
 .main-nav a:focus {
     color: var(--text);
