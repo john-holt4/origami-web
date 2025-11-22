@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 – Page Not Found | Origami Linux</title>
+        <meta name="description" content="Page not found." />
+        <link rel="icon" type="image/x-icon" href="origami.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+        />
+
+        <style>
+            /* --- ORIGAMI CORE STYLES --- */
+            :root {
+                --bg: #101216;
+                --bg-alt: #1a1d24;
+                --bg-soft: #1a1d24;
+                --border: #4a5568;
+                --text: #eceff4;
+                --text-dim: #a3b1cc;
+                --accent: #81a1c1;
+                --accent-alt: #b48ead;
+                --radius-m: 14px;
+                --radius-pill: 999px;
+                --font-stack: "Inter", system-ui, sans-serif;
+                --mono: "JetBrains Mono", monospace;
+            }
+
+            html[data-theme="light"] {
+                --bg: #f5f7fa;
+                --bg-alt: #eceff4;
+                --bg-soft: #eceff4;
+                --border: #d8dee9;
+                --text: #1a1d24;
+                --text-dim: #4a5568;
+                --accent: #5e81ac;
+                --accent-alt: #8f718b;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: var(--font-stack);
+                background: var(--bg);
+                color: var(--text);
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                transition:
+                    background 0.3s,
+                    color 0.3s;
+            }
+
+            /* --- 404 SPECIFIC STYLES --- */
+            .error-container {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                text-align: center;
+                position: relative;
+            }
+
+            .copy-container {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 2rem;
+                /* Font size applied here so both text and cursor share the context */
+                font-family: var(--mono);
+                font-size: clamp(1.5rem, 5vw, 2.5rem);
+                line-height: 1.4;
+            }
+
+            .error-text {
+                color: var(--text);
+                margin: 0;
+                letter-spacing: -1px;
+                white-space: pre;
+            }
+
+            .handle {
+                background: var(--accent);
+                /* Width and Height use 'em' to scale perfectly with the font-size of parent */
+                width: 0.4em;
+                height: 1.1em;
+                display: inline-block;
+                vertical-align: text-bottom;
+                margin-left: 5px;
+                opacity: 1;
+                transform: translateY(-0.05em);
+            }
+
+            .handle.blinking {
+                animation: blink 1s step-end infinite;
+            }
+
+            @keyframes blink {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            .btn {
+                text-decoration: none;
+                background: var(--bg-soft);
+                color: var(--text);
+                border: 1px solid var(--border);
+                padding: 0.75rem 1.5rem;
+                border-radius: var(--radius-pill);
+                font-weight: 500;
+                transition: 0.3s;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+            .btn:hover {
+                border-color: var(--accent);
+                color: var(--accent);
+            }
+        </style>
+    </head>
+    <body>
+        <main class="error-container">
+            <div class="copy-container">
+                <span id="type-target" class="error-text"></span
+                ><span class="handle blinking"></span>
+            </div>
+
+            <a href="index.html" class="btn">
+                <i class="fa-solid fa-house"></i> Return to Home
+            </a>
+        </main>
+
+        <script>
+            // 1. Theme Initialization (Read-only)
+            // We check localStorage so the 404 page matches the theme the user set on the main site.
+            const html = document.documentElement;
+            const stored = localStorage.getItem("origami-theme");
+            if (stored) html.setAttribute("data-theme", stored);
+
+            // 2. 404 Typing Logic
+            const textToType = "404, page not found.";
+            const typeTarget = document.getElementById("type-target");
+            const handle = document.querySelector(".handle");
+
+            function startTyping() {
+                // Reset
+                typeTarget.textContent = "";
+                handle.classList.remove("blinking");
+                handle.style.opacity = 1;
+
+                let i = 0;
+
+                const interval = setInterval(() => {
+                    typeTarget.textContent += textToType.charAt(i);
+                    i++;
+
+                    if (i >= textToType.length) {
+                        clearInterval(interval);
+                        handle.classList.add("blinking");
+                    }
+                }, 50);
+            }
+
+            setTimeout(startTyping, 500);
+        </script>
+    </body>
+</html>
