@@ -7,18 +7,79 @@
         <meta name="description" content="Page not found." />
         <link rel="icon" type="image/x-icon" href="origami.ico" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            href="fonts/inter/web/Inter-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
         />
         <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+            rel="preload"
+            href="fonts/inter/web/Inter-Medium.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="fonts/inter/web/Inter-SemiBold.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="fonts/jetbrains/fonts/webfonts/JetBrainsMono-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
         />
 
-        <style>
+        <!-- Font Awesome (async to avoid render-blocking) -->
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+            as="style"
+            onload="this.rel='stylesheet'"
+        />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+            />
+        </noscript>
+
+        <style id="critical-css">
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url("fonts/inter/web/Inter-Regular.woff2") format("woff2");
+            }
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url("fonts/inter/web/Inter-Medium.woff2") format("woff2");
+            }
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url("fonts/inter/web/Inter-SemiBold.woff2") format("woff2");
+            }
+            @font-face {
+                font-family: "JetBrains Mono";
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: url("fonts/jetbrains/fonts/webfonts/JetBrainsMono-Regular.woff2")
+                    format("woff2");
+            }
             /* --- ORIGAMI CORE STYLES --- */
             :root {
                 --bg: #101216;
