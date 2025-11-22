@@ -59,6 +59,13 @@
             crossorigin
         />
         <link rel="preload" href="styles.css" as="style" />
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            as="style"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <style id="critical-css">
             :root {
                 --bg: #101216;
@@ -180,7 +187,23 @@
             media="print"
             onload="this.media='all'"
         />
-        <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            media="print"
+            onload="this.media='all'"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <noscript>
+            <link rel="stylesheet" href="styles.css" />
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer"
+            />
+        </noscript>
     </head>
     <body>
         <svg
@@ -707,11 +730,7 @@
                 <ul id="nav-links">
                     <li>
                         <a href="#about"
-                            ><svg
-                                class="fa-solid fa-circle-info"
-                                role="img"
-                                aria-hidden="true"
-                            >
+                            ><svg class="icon" role="img" aria-hidden="true">
                                 <use href="#icon-info"></use>
                             </svg>
                             About</a
@@ -719,11 +738,7 @@
                     </li>
                     <li>
                         <a href="#features"
-                            ><svg
-                                class="fa-solid fa-layer-group"
-                                role="img"
-                                aria-hidden="true"
-                            >
+                            ><svg class="icon" role="img" aria-hidden="true">
                                 <use href="#icon-layers"></use>
                             </svg>
                             Features</a
@@ -731,11 +746,7 @@
                     </li>
                     <li>
                         <a href="#installation"
-                            ><svg
-                                class="fa-solid fa-download"
-                                role="img"
-                                aria-hidden="true"
-                            >
+                            ><svg class="icon" role="img" aria-hidden="true">
                                 <use href="#icon-download"></use>
                             </svg>
                             Install</a
@@ -743,11 +754,7 @@
                     </li>
                     <li>
                         <a href="#philosophy"
-                            ><svg
-                                class="fa-solid fa-feather"
-                                role="img"
-                                aria-hidden="true"
-                            >
+                            ><svg class="icon" role="img" aria-hidden="true">
                                 <use href="#icon-feather"></use>
                             </svg>
                             Philosophy</a
@@ -755,11 +762,7 @@
                     </li>
                     <li>
                         <a href="#community"
-                            ><svg
-                                class="fa-solid fa-users"
-                                role="img"
-                                aria-hidden="true"
-                            >
+                            ><svg class="icon" role="img" aria-hidden="true">
                                 <use href="#icon-users"></use>
                             </svg>
                             Community</a
@@ -793,10 +796,9 @@
                             href="https://files.origami.wf/origami-x86_64.iso"
                             target="_blank"
                             rel="noopener"
-                            ><i
-                                class="fa-solid fa-download"
-                                aria-hidden="true"
-                            ></i>
+                            ><svg class="icon icon-download" aria-hidden="true">
+                                <use href="#icon-download"></use>
+                            </svg>
                             Download ISO</a
                         >
                         <a
@@ -804,10 +806,9 @@
                             href="https://files.origami.wf/origami-nvidia-x86_64.iso"
                             target="_blank"
                             rel="noopener"
-                            ><i
-                                class="fa-solid fa-microchip"
-                                aria-hidden="true"
-                            ></i>
+                            ><svg class="icon icon-cpu" aria-hidden="true">
+                                <use href="#icon-cpu"></use>
+                            </svg>
                             Nvidia ISO</a
                         >
                         <a
@@ -815,10 +816,9 @@
                             href="https://gitlab.com/origami-linux/"
                             target="_blank"
                             rel="noopener"
-                            ><i
-                                class="fa-brands fa-gitlab"
-                                aria-hidden="true"
-                            ></i>
+                            ><svg class="icon icon-git" aria-hidden="true">
+                                <use href="#icon-git"></use>
+                            </svg>
                             GitLab</a
                         >
                         <a
@@ -826,10 +826,9 @@
                             href="https://discord.gg/ftE5Bvsfuj"
                             target="_blank"
                             rel="noopener"
-                            ><i
-                                class="fa-brands fa-discord"
-                                aria-hidden="true"
-                            ></i>
+                            ><svg class="icon icon-chat" aria-hidden="true">
+                                <use href="#icon-chat"></use>
+                            </svg>
                             Discord</a
                         >
                     </div>
@@ -1107,10 +1106,9 @@
                             chosen with purpose."
                         </blockquote>
                         <a href="#philosophy" class="btn">
-                            <i
-                                class="fa-solid fa-feather"
-                                aria-hidden="true"
-                            ></i>
+                            <svg class="icon icon-feather" aria-hidden="true">
+                                <use href="#icon-feather"></use>
+                            </svg>
                             Learn Our Philosophy
                         </a>
                     </div>
@@ -1145,10 +1143,12 @@
                                     href="https://files.origami.wf/origami-x86_64.iso"
                                     target="_blank"
                                     rel="noopener"
-                                    ><i
-                                        class="fa-solid fa-download"
+                                    ><svg
+                                        class="icon icon-download"
                                         aria-hidden="true"
-                                    ></i>
+                                    >
+                                        <use href="#icon-download"></use>
+                                    </svg>
                                     Standard ISO</a
                                 >
                                 <a
@@ -1156,10 +1156,12 @@
                                     href="https://files.origami.wf/origami-nvidia-x86_64.iso"
                                     target="_blank"
                                     rel="noopener"
-                                    ><i
-                                        class="fa-solid fa-microchip"
+                                    ><svg
+                                        class="icon icon-cpu"
                                         aria-hidden="true"
-                                    ></i>
+                                    >
+                                        <use href="#icon-cpu"></use>
+                                    </svg>
                                     Nvidia ISO</a
                                 >
                             </div>
@@ -1370,7 +1372,9 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
                     data-scroll="#top"
                     aria-label="Back to top"
                 >
-                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                    <svg class="icon icon-arrow-up" aria-hidden="true">
+                        <use href="#icon-arrow-up"></use>
+                    </svg>
                 </button>
             </div>
         </footer>
