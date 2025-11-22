@@ -16,6 +16,13 @@
         <meta property="og:type" content="website" />
         <meta name="theme-color" content="#0d1117" />
         <link rel="icon" type="image/x-icon" href="origami.ico" />
+        <link
+            rel="preload"
+            href="screenshot.png"
+            as="image"
+            type="image/png"
+            fetchpriority="high"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -185,6 +192,11 @@
                     src="screenshot.png"
                     alt="Origami Linux Desktop Screenshot"
                     class="hero-screenshot"
+                    width="1662"
+                    height="935"
+                    decoding="async"
+                    loading="eager"
+                    fetchpriority="high"
                 />
             </div>
             <div class="scroll-indicator" aria-hidden="true">
