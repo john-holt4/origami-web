@@ -284,12 +284,18 @@ p {
     text-align: center;
 }
 .hero-screenshot {
-    max-width: 100%;
-    height: auto;
+    display: block;
+    width: min(100%, 900px);
+    margin: 2rem auto 0;
     border-radius: var(--radius-m);
     box-shadow: var(--shadow-md);
-    margin: 2rem auto 0;
+    overflow: hidden;
+}
+.hero-screenshot img {
     display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
 }
 .scroll-indicator {
     position: absolute;
@@ -299,6 +305,7 @@ p {
     font-size: 0.75rem;
     color: var(--text-dim);
     animation: float 3s ease-in-out infinite;
+    will-change: transform;
 }
 @keyframes float {
     0%,
@@ -437,6 +444,7 @@ p {
     padding: 1rem 0.95rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-m);
+    will-change: transform;
 }
 .quote {
     margin: 2rem 0 0;
@@ -774,6 +782,7 @@ code {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .feature-card:hover {
@@ -928,6 +937,7 @@ summary i {
 .scroll-indicator i {
     margin-right: 0.5rem;
     animation: bounce 2s infinite;
+    will-change: transform;
 }
 
 @keyframes bounce {
@@ -943,6 +953,20 @@ summary i {
     }
     60% {
         transform: translateY(-5px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .scroll-indicator {
+        animation: none !important;
     }
 }
 

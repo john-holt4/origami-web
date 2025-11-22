@@ -30,9 +30,10 @@
         <link rel="icon" type="image/x-icon" href="origami.ico" />
         <link
             rel="preload"
-            href="/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/images/screenshot/screenshot.png"
+            href="images/screenshot/screenshot-1662.webp"
             as="image"
-            imagesrcset="/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=640/images/screenshot/screenshot.png 640w, /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/images/screenshot/screenshot.png 960w, /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/images/screenshot/screenshot.png 1280w, /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1662/images/screenshot/screenshot.png 1662w"
+            type="image/webp"
+            imagesrcset="images/screenshot/screenshot-640.webp 640w, images/screenshot/screenshot-960.webp 960w, images/screenshot/screenshot-1280.webp 1280w, images/screenshot/screenshot-1662.webp 1662w"
             imagesizes="(max-width: 768px) 90vw, (max-width: 1280px) 80vw, 900px"
             fetchpriority="high"
         />
@@ -832,23 +833,32 @@
                             Discord</a
                         >
                     </div>
-                    <img
-                        src="/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/images/screenshot/screenshot.png"
-                        srcset="
-                            /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=640/images/screenshot/screenshot.png   640w,
-                            /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/images/screenshot/screenshot.png   960w,
-                            /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/images/screenshot/screenshot.png 1280w,
-                            /cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1662/images/screenshot/screenshot.png 1662w
-                        "
-                        sizes="(max-width: 768px) 90vw, (max-width: 1280px) 80vw, 900px"
-                        alt="Origami Linux Desktop Screenshot"
-                        class="hero-screenshot"
-                        width="1662"
-                        height="935"
-                        decoding="async"
-                        loading="eager"
-                        fetchpriority="high"
-                    />
+                    <picture class="hero-screenshot">
+                        <source
+                            type="image/webp"
+                            srcset="
+                                images/screenshot/screenshot-640.webp   640w,
+                                images/screenshot/screenshot-960.webp   960w,
+                                images/screenshot/screenshot-1280.webp 1280w,
+                                images/screenshot/screenshot-1662.webp 1662w
+                            "
+                            sizes="(max-width: 768px) 90vw, (max-width: 1280px) 80vw, 900px"
+                        />
+                        <source
+                            type="image/png"
+                            srcset="images/screenshot/screenshot.png 1662w"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1280px) 80vw, 900px"
+                        />
+                        <img
+                            src="images/screenshot/screenshot.png"
+                            alt="Origami Linux Desktop Screenshot"
+                            width="1662"
+                            height="935"
+                            decoding="async"
+                            loading="eager"
+                            fetchpriority="high"
+                        />
+                    </picture>
                 </div>
                 <div class="scroll-indicator" aria-hidden="true">
                     <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
