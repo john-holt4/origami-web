@@ -365,7 +365,7 @@ p {
     font-size: 0.8rem;
     padding: 0.65rem 1rem;
 }
-.btn i, .btn .icon {
+.btn .icon {
     margin-right: 0.45rem;
 }
 .btn:hover {
@@ -426,7 +426,7 @@ p {
     gap: 0.5rem;
     margin-bottom: 0.75rem;
 }
-.card-header i, .card-header .icon {
+.card-header .card-header .icon {
     color: var(--accent);
     font-size: 1.1rem;
 }
@@ -643,11 +643,11 @@ code {
     font-family: var(--mono);
     display: block;
 }
-.main-nav a i, .main-nav a .icon {
+.main-nav a .icon {
     margin-right: 0.35rem;
     color: var(--accent);
 }
-.btn i, .btn .icon {
+.btn .icon {
     margin-right: 0.45rem;
 }
 
@@ -661,7 +661,7 @@ code {
 .value-prop {
     text-align: center;
 }
-.value-prop i, .value-prop .icon {
+.value-prop .icon {
     font-size: 2rem;
     color: var(--accent);
     margin-bottom: 0.75rem;
@@ -692,7 +692,7 @@ code {
     margin-top: 0;
     color: var(--accent);
 }
-.install-option h4 i, .install-option h4 .icon {
+.install-option h4 .icon {
     margin-right: 0.5rem;
 }
 .install-buttons {
@@ -712,7 +712,7 @@ code {
     margin-top: 0;
     color: var(--accent-green);
 }
-.verification-info h4 i, .verification-info h4 .icon {
+.verification-info h4 .verification-info h4 .icon {
     margin-right: 0.5rem;
 }
 .getting-started-link {
@@ -767,7 +767,7 @@ code {
     border-bottom: 2px solid var(--border);
 }
 
-.category-header i, .category-header .icon {
+.category-header .category-header .icon {
     color: var(--accent);
     font-size: 1.25rem;
 }
@@ -915,38 +915,38 @@ code {
 }
 
 /* Icon styling enhancements */
-h3 i, h3 .icon {
+h3 h3 .icon {
     margin-right: 0.75rem;
     color: var(--accent);
 }
 
-.principles article h4 i, .principles article h4 .icon {
+.principles article h4 .icon {
     margin-right: 0.5rem;
     color: var(--accent);
     font-size: 0.9rem;
 }
 
-.inline-links a i, .inline-links a .icon {
+.inline-links a .inline-links a .icon {
     margin-right: 0.5rem;
     color: var(--accent);
 }
 
-.site-footer p i, .site-footer p .icon {
+.site-footer p .icon {
     margin: 0 0.25rem;
     color: var(--accent);
 }
 
-.install-option p i, .install-option p .icon {
+.install-option p .icon {
     margin-right: 0.5rem;
     color: var(--accent);
 }
 
-summary i, summary .icon {
+summary .icon {
     margin-right: 0.5rem;
     color: var(--accent);
 }
 
-.scroll-indicator i, .scroll-indicator .icon {
+.scroll-indicator .icon {
     margin-right: 0.5rem;
     animation: bounce 2s infinite;
     will-change: transform;
@@ -983,13 +983,13 @@ summary i, summary .icon {
 }
 
 /* About section icon styling */
-#about p i, #about p .icon {
+#about p #about p .icon {
     margin-right: 0.5rem;
     color: var(--accent);
 }
 
 /* Community section icon styling */
-#community p i, #community p .icon {
+#community p #community p .icon {
     margin-right: 0.5rem;
     color: var(--accent);
 }

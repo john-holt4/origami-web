@@ -51,21 +51,9 @@
             type="font/woff2"
             crossorigin
         />
-        <link
-            rel="preload"
-            href="fonts/jetbrains/fonts/webfonts/JetBrainsMono-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
+
         <link rel="preload" href="styles.css" as="style" />
-        <link
-            rel="preload"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            as="style"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
+
         <style id="critical-css">
             :root {
                 --bg: #101216;
@@ -166,6 +154,14 @@
                 background: #1a1d24;
                 transition: 0.3s;
             }
+            .icon {
+                width: 1em;
+                height: 1em;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                vertical-align: middle;
+            }
             .btn.primary {
                 background: var(--gradient);
                 border: 0;
@@ -187,22 +183,8 @@
             media="print"
             onload="this.media='all'"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-            media="print"
-            onload="this.media='all'"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
         <noscript>
             <link rel="stylesheet" href="styles.css" />
-            <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-                crossorigin="anonymous"
-                referrerpolicy="no-referrer"
-            />
         </noscript>
     </head>
     <body>
@@ -860,7 +842,9 @@
                     </picture>
                 </div>
                 <div class="scroll-indicator" aria-hidden="true">
-                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    <svg class="icon icon-chevrons-down" aria-hidden="true" focusable="false">
+                        <use href="#icon-chevrons-down"></use>
+                    </svg>
                     Scroll to explore
                 </div>
             </section>
@@ -868,10 +852,9 @@
             <section id="about" class="panel">
                 <div class="inner">
                     <h3>
-                        <i
-                            class="fa-solid fa-question-circle"
-                            aria-hidden="true"
-                        ></i>
+                        <svg class="icon icon-help" aria-hidden="true" focusable="false">
+                            <use href="#icon-help"></use>
+                        </svg>
                         Why Origami?
                     </h3>
                     <p>
@@ -884,10 +867,9 @@
                     </p>
                     <div class="value-props">
                         <div class="value-prop">
-                            <i
-                                class="fa-solid fa-shield-halved"
-                                aria-hidden="true"
-                            ></i>
+                            <svg class="icon icon-shield" aria-hidden="true" focusable="false">
+                                <use href="#icon-shield"></use>
+                            </svg>
                             <h4>Atomic & Secure</h4>
                             <p>
                                 Immutable OS with signed container images and
@@ -895,7 +877,9 @@
                             </p>
                         </div>
                         <div class="value-prop">
-                            <i class="fa-solid fa-cube" aria-hidden="true"></i>
+                            <svg class="icon icon-box" aria-hidden="true" focusable="false">
+                                <use href="#icon-box"></use>
+                            </svg>
                             <h4>Container-First</h4>
                             <p>
                                 Develop in isolated environments while keeping
@@ -903,10 +887,9 @@
                             </p>
                         </div>
                         <div class="value-prop">
-                            <i
-                                class="fa-solid fa-palette"
-                                aria-hidden="true"
-                            ></i>
+                            <svg class="icon icon-palette" aria-hidden="true" focusable="false">
+                                <use href="#icon-palette"></use>
+                            </svg>
                             <h4>Beautiful by Default</h4>
                             <p>
                                 Cosmic Desktop with thoughtful theming and
@@ -915,7 +898,9 @@
                         </div>
                     </div>
                     <p class="note">
-                        <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                        <svg class="icon icon-flask" aria-hidden="true" focusable="false">
+                            <use href="#icon-flask"></use>
+                        </svg>
                         Experimental project: expect rapid iteration. Back up
                         your data.
                     </p>
@@ -935,10 +920,9 @@
                     <div class="features-showcase">
                         <div class="feature-category">
                             <div class="category-header">
-                                <i
-                                    class="fa-solid fa-mountain"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-mountain" aria-hidden="true" focusable="false">
+                                    <use href="#icon-mountain"></use>
+                                </svg>
                                 <h4>Rock-Solid Foundation</h4>
                             </div>
                             <div class="feature-cards">
@@ -975,10 +959,9 @@
 
                         <div class="feature-category">
                             <div class="category-header">
-                                <i
-                                    class="fa-solid fa-code"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-code" aria-hidden="true" focusable="false">
+                                    <use href="#icon-code"></use>
+                                </svg>
                                 <h4>Developer Experience</h4>
                             </div>
                             <div class="feature-cards">
@@ -1017,10 +1000,9 @@
 
                         <div class="feature-category">
                             <div class="category-header">
-                                <i
-                                    class="fa-solid fa-palette"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-palette" aria-hidden="true" focusable="false">
+                                    <use href="#icon-palette"></use>
+                                </svg>
                                 <h4>Aesthetic Excellence</h4>
                             </div>
                             <div class="feature-cards">
@@ -1060,10 +1042,9 @@
 
                         <div class="feature-category">
                             <div class="category-header">
-                                <i
-                                    class="fa-solid fa-gauge-high"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-gauge" aria-hidden="true" focusable="false">
+                                    <use href="#icon-gauge"></use>
+                                </svg>
                                 <h4>Performance & Tools</h4>
                             </div>
                             <div class="feature-cards">
@@ -1123,17 +1104,15 @@
                     <div class="install-options">
                         <div class="install-option">
                             <h4>
-                                <i
-                                    class="fa-solid fa-compact-disc"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-disc" aria-hidden="true" focusable="false">
+                                    <use href="#icon-disc"></use>
+                                </svg>
                                 Fresh Installation
                             </h4>
                             <p>
-                                <i
-                                    class="fa-solid fa-hard-drive"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-harddrive" aria-hidden="true" focusable="false">
+                                    <use href="#icon-harddrive"></use>
+                                </svg>
                                 Download the ISO and install fresh on your
                                 machine.
                             </p>
@@ -1168,26 +1147,23 @@
                         </div>
                         <div class="install-option">
                             <h4>
-                                <i
-                                    class="fa-solid fa-refresh"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-refresh" aria-hidden="true" focusable="false">
+                                    <use href="#icon-refresh"></use>
+                                </svg>
                                 Rebase from Fedora Atomic
                             </h4>
                             <p>
-                                <i
-                                    class="fa-solid fa-arrow-right-arrow-left"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-repeat" aria-hidden="true" focusable="false">
+                                    <use href="#icon-repeat"></use>
+                                </svg>
                                 Switch your existing Fedora Atomic system to
                                 Origami.
                             </p>
                             <details>
                                 <summary>
-                                    <i
-                                        class="fa-solid fa-code"
-                                        aria-hidden="true"
-                                    ></i>
+                                    <svg class="icon icon-code" aria-hidden="true" focusable="false">
+                                        <use href="#icon-code"></use>
+                                    </svg>
                                     Show Commands
                                 </summary>
                                 <pre><code># Rebase to Origami (standard)
@@ -1213,26 +1189,23 @@ systemctl reboot</code></pre>
 
                     <div class="verification-info">
                         <h4>
-                            <i
-                                class="fa-solid fa-shield-check"
-                                aria-hidden="true"
-                            ></i>
+                            <svg class="icon icon-shield-check" aria-hidden="true" focusable="false">
+                                <use href="#icon-shield-check"></use>
+                            </svg>
                             Security & Verification
                         </h4>
                         <p>
-                            <i
-                                class="fa-solid fa-signature"
-                                aria-hidden="true"
-                            ></i>
+                            <svg class="icon icon-pen" aria-hidden="true" focusable="false">
+                                <use href="#icon-pen"></use>
+                            </svg>
                             All images are signed with Sigstore for supply-chain
                             security.
                         </p>
                         <details>
                             <summary>
-                                <i
-                                    class="fa-solid fa-key"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-key" aria-hidden="true" focusable="false">
+                                    <use href="#icon-key"></use>
+                                </svg>
                                 Verify Image Signature
                             </summary>
                             <pre><code>curl -O https://gitlab.com/origami-linux/images/-/raw/main/cosign.pub
@@ -1245,46 +1218,44 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
             <section id="philosophy" class="panel alt">
                 <div class="inner">
                     <h3>
-                        <i class="fa-solid fa-feather" aria-hidden="true"></i>
+                        <svg class="icon icon-feather" aria-hidden="true" focusable="false">
+                            <use href="#icon-feather"></use>
+                        </svg>
                         Philosophy
                     </h3>
                     <div class="principles">
                         <article>
                             <h4>
-                                <i
-                                    class="fa-solid fa-arrow-trend-up"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-trend" aria-hidden="true" focusable="false">
+                                    <use href="#icon-trend"></use>
+                                </svg>
                                 Kaizen 改善
                             </h4>
                             <p>Continuous improvement, iterative refinement.</p>
                         </article>
                         <article>
                             <h4>
-                                <i
-                                    class="fa-solid fa-heart"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-heart" aria-hidden="true" focusable="false">
+                                    <use href="#icon-heart"></use>
+                                </svg>
                                 Wabi‑Sabi 侘寂
                             </h4>
                             <p>Beauty in simplicity and imperfection.</p>
                         </article>
                         <article>
                             <h4>
-                                <i
-                                    class="fa-solid fa-minimize"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-minimize" aria-hidden="true" focusable="false">
+                                    <use href="#icon-minimize"></use>
+                                </svg>
                                 Kanso 簡素
                             </h4>
                             <p>Elegance through reduction of clutter.</p>
                         </article>
                         <article>
                             <h4>
-                                <i
-                                    class="fa-solid fa-leaf"
-                                    aria-hidden="true"
-                                ></i>
+                                <svg class="icon icon-leaf" aria-hidden="true" focusable="false">
+                                    <use href="#icon-leaf"></use>
+                                </svg>
                                 Shizen 自然
                             </h4>
                             <p>Naturalness without pretense – authenticity.</p>
@@ -1300,11 +1271,15 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
             <section id="community" class="panel">
                 <div class="inner">
                     <h3>
-                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                        <svg class="icon icon-users" aria-hidden="true" focusable="false">
+                            <use href="#icon-users"></use>
+                        </svg>
                         Community & Contributing
                     </h3>
                     <p>
-                        <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+                        <svg class="icon icon-lightbulb" aria-hidden="true" focusable="false">
+                            <use href="#icon-lightbulb"></use>
+                        </svg>
                         Origami thrives on shared creativity. Report bugs,
                         suggest features, improve docs, craft themes, or
                         contribute code.
@@ -1315,10 +1290,9 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
                                 href="https://gitlab.com/groups/origami-linux/-/issues"
                                 target="_blank"
                                 rel="noopener"
-                                ><i
-                                    class="fa-solid fa-bug"
-                                    aria-hidden="true"
-                                ></i>
+                                ><svg class="icon icon-bug" aria-hidden="true" focusable="false">
+    <use href="#icon-bug"></use>
+</svg>
                                 Issue Tracker</a
                             >
                         </li>
@@ -1327,10 +1301,9 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
                                 href="https://discord.gg/ftE5Bvsfuj"
                                 target="_blank"
                                 rel="noopener"
-                                ><i
-                                    class="fa-brands fa-discord"
-                                    aria-hidden="true"
-                                ></i>
+                                ><svg class="icon icon-chat" aria-hidden="true" focusable="false">
+    <use href="#icon-chat"></use>
+</svg>
                                 Discord Server</a
                             >
                         </li>
@@ -1339,10 +1312,9 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
                                 href="https://gitlab.com/origami-linux"
                                 target="_blank"
                                 rel="noopener"
-                                ><i
-                                    class="fa-brands fa-gitlab"
-                                    aria-hidden="true"
-                                ></i>
+                                ><svg class="icon icon-git" aria-hidden="true" focusable="false">
+    <use href="#icon-git"></use>
+</svg>
                                 Source Code</a
                             >
                         </li>
@@ -1354,17 +1326,27 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
         <footer class="site-footer">
             <div class="inner footer-content">
                 <p class="small">
-                    <i class="fa-solid fa-copyright" aria-hidden="true"></i>
+                    <svg class="icon icon-copyright" aria-hidden="true" focusable="false">
+                        <use href="#icon-copyright"></use>
+                    </svg>
                     <span id="year"></span> Origami Linux.
-                    <i class="fa-solid fa-hammer" aria-hidden="true"></i>
+                    <svg class="icon icon-hammer" aria-hidden="true" focusable="false">
+                        <use href="#icon-hammer"></use>
+                    </svg>
                     Crafted with precision & purpose.
                 </p>
                 <p class="small">
-                    <i class="fa-solid fa-heart" aria-hidden="true"></i> This
+                    <svg class="icon icon-heart" aria-hidden="true" focusable="false">
+                        <use href="#icon-heart"></use>
+                    </svg> This
                     project is sponsored by
-                    <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                    <svg class="icon icon-cloud" aria-hidden="true" focusable="false">
+                        <use href="#icon-cloud"></use>
+                    </svg>
                     Cloudflare's Project Alexandria &
-                    <i class="fa-brands fa-gitlab" aria-hidden="true"></i>
+                    <svg class="icon icon-git" aria-hidden="true" focusable="false">
+                        <use href="#icon-git"></use>
+                    </svg>
                     GitLab
                 </p>
                 <button
@@ -1379,6 +1361,6 @@ cosign verify --key cosign.pub registry.gitlab.com/origami-linux/images/origami:
             </div>
         </footer>
 
-        <script src="script.js" defer></script>
+        <script data-cfasync="false" src="script.js" defer></script>
     </body>
 </html>
