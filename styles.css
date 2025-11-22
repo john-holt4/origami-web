@@ -309,6 +309,25 @@ p {
     height: auto;
     border-radius: inherit;
 }
+.scroll-indicator {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+}
+@keyframes float {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, -6px);
+    }
+}
 
 .cta-group {
     display: flex;
@@ -437,6 +456,7 @@ p {
     padding: 1rem 0.95rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-m);
+    will-change: transform;
 }
 .quote {
     margin: 2rem 0 0;
@@ -590,7 +610,6 @@ p {
 
 /* Theme transitions */
 html {
-    scroll-behavior: smooth;
     transition:
         background-color 0.4s,
         color 0.4s;
@@ -775,6 +794,7 @@ code {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .feature-card:hover {
@@ -924,6 +944,28 @@ h3 h3 .icon {
 summary .icon {
     margin-right: 0.5rem;
     color: var(--accent);
+}
+
+.scroll-indicator .icon {
+    margin-right: 0.5rem;
+    animation: bounce 2s infinite;
+    will-change: transform;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
